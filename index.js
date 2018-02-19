@@ -25,9 +25,13 @@ cli.input.forEach(path => {
     {
         result = result || 1
         console.error(`File ${path} is not valid!`)
-
     }
 })
+
+if(result == 0)
+{
+    console.log("All files are valid!")
+}
 process.exit(result)
 
 function validate(path, type) {
