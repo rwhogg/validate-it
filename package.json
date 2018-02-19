@@ -1,10 +1,11 @@
 {
-    "name": "@rwhogg/validate-it",
+    "name": "validate-it",
     "version": "0.1.0",
     "description": "Validate any file type (well, a lot of them, anyways)",
     "main": "index.js",
+    "bin": "./validate-it",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "make test"
     },
     "repository": {
         "type": "git",
@@ -13,7 +14,7 @@
     "keywords": [
         "validate"
     ],
-    "author": "Bob W. Hogg",
+    "author": "Bob W. Hogg <rwhogg@linux.com>",
     "license": "GPL-3.0+",
     "bugs": {
         "url": "https://github.com/rwhogg/validate-it/issues"
@@ -26,5 +27,10 @@
         "meow": "^4.0.0",
         "mime-types": "^2.1.18",
         "vnu-jar": "^17.11.1"
+    },
+    "devDependencies": {
+        "eslint": "^4.18.0",
+        "eslint-config-rwhogg": "0.1.0",
+        "glob": "^7.1.2"
     }
 }
