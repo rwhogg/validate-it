@@ -12,6 +12,6 @@ docs: validate-it.js validators man.1
 	npx jsdox validate-it.js validators/*.js --output docs folder
 
 release:
-	npx release-it
+	npx np
 
 .PHONY: lint test release
