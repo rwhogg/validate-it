@@ -13,7 +13,7 @@ const validators = {};
 let result = 0;
 cli.input.forEach(path => {
     const fullType = mime.lookup(path)
-    if(!fulltype)
+    if(!fullType)
     {
         result = 2
         console.error(`File ${path} is of invalid or unknown type!`)
