@@ -12,9 +12,10 @@ v0.1.1 / 2018-02-18
   * Switch task order in Makefile
   * Change package name, because validate-it is taken
 
-0.1.0 / 2018-02-18
-==================
+v0.1.0 / 2018-02-18
+===================
 
+  * Add CHANGELOG.md
   * Improve release task
   * Fix README
   * Fix code style
