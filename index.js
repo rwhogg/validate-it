@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const acorn = require("acorn")
+const fs = require("fs")
 const meow = require("meow")
 const mime = require("mime-types")
 
@@ -31,7 +31,8 @@ cli.input.forEach(path => {
 process.exit(result)
 
 function validate(path, type) {
-    validators[type] = validators[type] || require(`${__dir}/${type}.validator.js`)
+    validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`)
     const validator = validators[type]
-    return validator(path)
+    const text = fs.readFileSync(path, {encoding: "utf-8"})
+    return validator(text)
 }
