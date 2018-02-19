@@ -7,38 +7,71 @@ const cli = meow(`
     Usage
         $ validate-it <path> <path>...
 `);
-
 const validators = {};
 
-let result = 0;
-cli.input.forEach(path =>
+async function main()
 {
-    const fullType = mime.lookup(path);
-    if(!fullType)
+    const results = await Promise.all(cli.input.map(async function(path)
+    {
+        const fullType = mime.lookup(path);
+        if(!fullType)
+        {
+            console.error(`File ${path} is of invalid or unknown type!`);
+            return 2;
+        }
+
+        let valid;
+        try
+        {
+            valid = await validate(path, fullType);
+        }
+        catch(e)
+        {
+            console.error(e.message);
+            return 2;
+        }
+
+        if(valid)
+        {
+            console.log(`File ${path} is valid!`);
+            return 0;
+        }
+        else
+        {
+            console.error(`File ${path} is not valid!`);
+            return 1;
+        }
+    }));
+
+    let result = 0;
+    if(results.includes(2))
     {
         result = 2;
-        console.error(`File ${path} is of invalid or unknown type!`);
     }
-    const type = fullType.split("/")[1];
-    
-    const valid = validate(path, type);
-    if(valid)
+    else if(results.includes(1))
     {
-        console.log(`File ${path} is valid!`);
+        result = 1;
     }
-    else
-    {
-        result = result || 1;
-        console.error(`File ${path} is not valid!`);
-    }
-});
+    process.exit(result);
+}
 
-process.exit(result);
-
-function validate(path, type)
+async function validate(path, fullType)
 {
-    validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`);
+    const type = fullType.split("/")[1];
+    // FIXME: for the type, strip out the "x-" prefix if necessary
+    
+    try
+    {
+        validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`);
+    }
+    catch(e)
+    {
+        throw new Error(`No validator exists for MIME type ${fullType}. If this is a commonly-used file type, please` +
+                        " consider submitting a PR to https://github.com/rwhogg/validate-it to add support for it.");
+    }
     const validator = validators[type];
     const text = fs.readFileSync(path, {encoding: "utf-8"});
-    return validator(text);
+    return await validator(text);
 }
+
+main();

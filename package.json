@@ -24,6 +24,7 @@
         "acorn": "^5.4.1",
         "css": "^2.2.1",
         "execa": "^0.9.0",
+        "less": "^3.0.1",
         "meow": "^4.0.0",
         "mime-types": "^2.1.18",
         "vnu-jar": "^17.11.1"
@@ -33,5 +34,8 @@
         "eslint-config-rwhogg": "0.1.0",
         "glob": "^7.1.2",
         "release-it": "^7.0.2"
+    },
+    "engines": {
+        "node": ">= 8"
     }
 }
