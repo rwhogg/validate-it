@@ -1,5 +1,8 @@
 # Validate-it!
 
+[![Travis](https://img.shields.io/travis/rwhogg/validate-it.svg?style=plastic)](https://travis-ci.org/rwhogg/validate-it)
+[![npm (scoped)](https://img.shields.io/npm/v/@rwhogg/validate-it.svg?style=plastic)](https://www.npmjs.com/package/@rwhogg/validate-it)
+
 Ever wanted to validate a file but don't remember the command-line tool to do so? Don't want to install one for a
 one-off task nor go looking for one?
 
