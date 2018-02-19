@@ -1,6 +1,6 @@
 {
     "name": "@rwhogg/validate-it",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "description": "Validate any file type (well, a lot of them, anyways)",
     "main": "validate-it",
     "bin": "./validate-it",
