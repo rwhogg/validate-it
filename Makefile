@@ -5,4 +5,4 @@ test: lint
 	node test.js
 
 release:
-	npx release
+	npx release-it
