@@ -1,16 +1,17 @@
-const parser = require("css")
+const parser = require("css");
 
-function validate(text) {
-    const result = parser.parse(text, {silent: true})
+function validate(text)
+{
+    const result = parser.parse(text, {silent: true});
     if(!result.stylesheet)
     {
-        return false
+        return false;
     }
     if(!result.stylesheet.parsingErrors)
     {
-        return true
+        return true;
     }
-    return result.stylesheet.parsingErrors.length == 0
+    return result.stylesheet.parsingErrors.length === 0;
 }
 
-module.exports = validate
+module.exports = validate;
