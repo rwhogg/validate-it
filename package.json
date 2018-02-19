@@ -2,7 +2,7 @@
     "name": "@rwhogg/validate-it",
     "version": "0.1.1",
     "description": "Validate any file type (well, a lot of them, anyways)",
-    "main": "index.js",
+    "main": "validate-it",
     "bin": "./validate-it",
     "scripts": {
         "test": "make test"
