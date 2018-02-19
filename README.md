@@ -22,6 +22,7 @@ We have all* your validation tasks right here!
 * JavaScript
 * JSON
 * LESS
+* Sass and SCSS
 
 ## Copyright
 

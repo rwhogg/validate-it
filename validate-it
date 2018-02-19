@@ -36,11 +36,8 @@ async function main()
             console.log(`File ${path} is valid!`);
             return 0;
         }
-        else
-        {
-            console.error(`File ${path} is not valid!`);
-            return 1;
-        }
+        console.error(`File ${path} is not valid!`);
+        return 1;
     }));
 
     let result = 0;
@@ -57,9 +54,9 @@ async function main()
 
 async function validate(path, fullType)
 {
-    const type = fullType.split("/")[1];
-    // FIXME: for the type, strip out the "x-" prefix if necessary
-    
+    const subtype = fullType.split("/")[1];
+    const type = subtype.startsWith("x-") ? subtype.split("x-")[1] : subtype;
+
     try
     {
         validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`);
@@ -70,6 +67,10 @@ async function validate(path, fullType)
                         " consider submitting a PR to https://github.com/rwhogg/validate-it to add support for it.");
     }
     const validator = validators[type];
+    if(typeof validator !== "function")
+    {
+        throw new Error(`Bad validator for MIME type ${fullType}`);
+    }
     const text = fs.readFileSync(path, {encoding: "utf-8"});
     return await validator(text);
 }

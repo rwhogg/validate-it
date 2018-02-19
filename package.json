@@ -28,6 +28,7 @@
         "less": "^3.0.1",
         "meow": "^4.0.0",
         "mime-types": "^2.1.18",
+        "node-sass": "^4.7.2",
         "vnu-jar": "^17.11.1"
     },
     "devDependencies": {
