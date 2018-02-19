@@ -11,6 +11,13 @@ We have all* your validation tasks right here!
 % [sudo] npm install -g @rwhogg/validate-it
 ```
 
+## Supported File Formats
+
+* HTML
+* CSS
+* JavaScript
+* JSON
+
 ## Copyright
 
 Copyright (C) Bob "Wombat" Hogg, 2018.
