@@ -1,3 +1,10 @@
 {
-    extends: "eslint-config-rwhogg"
+    extends: "eslint-config-rwhogg",
+    plugins: [
+        "fp"
+    ],
+    rules: {
+        "fp/no-loops": "error",
+        "fp/no-arguments": "error"
+    }
 }
