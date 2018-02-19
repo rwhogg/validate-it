@@ -6,3 +6,4 @@ test: lint
 
 release: test
 	git changelog
+	np
