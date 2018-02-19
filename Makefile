@@ -4,6 +4,5 @@ lint:
 test: lint
 	node test.js
 
-release: test
-	np
-	git changelog
+release:
+	npx release
