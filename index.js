@@ -21,7 +21,11 @@ cli.input.forEach(path => {
     const type = fullType.split("/")[1]
     
     const valid = validate(path, type)
-    if(!valid)
+    if(valid)
+    {
+        console.log(`File ${path} is valid!`)
+    }
+    else
     {
         result = result || 1
         console.error(`File ${path} is not valid!`)
