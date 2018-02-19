@@ -42,5 +42,5 @@
     "engines": {
         "node": ">= 8"
     },
-    "man": "man.1"
+    "man": "./man.1"
 }
