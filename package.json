@@ -1,0 +1,22 @@
+{
+    "name": "@rwhogg/validate-it",
+    "version": "0.1.0",
+    "description": "Validate any file type (well, a lot of them, anyways)",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rwhogg/validate-it.git"
+    },
+    "keywords": [
+        "validate"
+    ],
+    "author": "Bob W. Hogg",
+    "license": "GPL-3.0+",
+    "bugs": {
+        "url": "https://github.com/rwhogg/validate-it/issues"
+    },
+    "homepage": "https://github.com/rwhogg/validate-it#readme"
+}
