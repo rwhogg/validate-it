@@ -12,7 +12,8 @@
         "url": "git+https://github.com/rwhogg/validate-it.git"
     },
     "keywords": [
-        "validate"
+        "validate",
+        "validation"
     ],
     "author": "Bob W. Hogg <rwhogg@linux.com>",
     "license": "GPL-3.0+",
