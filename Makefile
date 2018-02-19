@@ -5,5 +5,5 @@ test: lint
 	node test.js
 
 release: test
-	git changelog
 	np
+	git changelog
