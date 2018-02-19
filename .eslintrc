@@ -5,6 +5,7 @@
     ],
     rules: {
         "fp/no-loops": "error",
-        "fp/no-arguments": "error"
+        "fp/no-arguments": "error",
+        "valid-jsdoc": "error"
     }
 }

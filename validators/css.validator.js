@@ -1,5 +1,14 @@
+/**
+ * @module CSSValidator
+ */
+
 const parser = require("css");
 
+/**
+ * Validates CSS files.
+ * @param {string} text CSS text to validate.
+ * @returns {boolean} `true` if valid; `false` otherwise.
+ */
 function validate(text)
 {
     const result = parser.parse(text, {silent: true});

@@ -9,6 +9,10 @@ const cli = meow(`
 `);
 const validators = {};
 
+/**
+ * Entry point for validate-it
+ * @returns {number} Exit status for validate-it.
+ */
 async function main()
 {
     const results = await Promise.all(cli.input.map(async function(path)

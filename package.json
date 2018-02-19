@@ -36,6 +36,7 @@
         "eslint-config-rwhogg": "0.1.0",
         "eslint-plugin-fp": "^2.3.0",
         "glob": "^7.1.2",
+        "jsdox": "^0.4.10",
         "release-it": "^7.0.2"
     },
     "engines": {
