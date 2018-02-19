@@ -18,5 +18,10 @@
     "bugs": {
         "url": "https://github.com/rwhogg/validate-it/issues"
     },
-    "homepage": "https://github.com/rwhogg/validate-it#readme"
+    "homepage": "https://github.com/rwhogg/validate-it#readme",
+    "dependencies": {
+        "acorn": "^5.4.1",
+        "meow": "^4.0.0",
+        "mime-types": "^2.1.18"
+    }
 }
