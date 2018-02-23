@@ -1,11 +1,15 @@
+/**
+ * @module SCSSValidator
+ */
+
 const sass = require("node-sass"); // dart-sass is still in beta
 
-/*
-    This module is used by the Sass validator too.
-    When used directly by validate-it, indentedSyntax will be falsy and hence will use the CSS syntax.
-    The Sass validator explicitly sets it to true, because node-sass expects the CSS syntax by default when not given
-    a filename.
-*/
+/**
+ * Validates SCSS (or SASS) files.
+ * @param {string} text Text of the SCSS file to validate.
+ * @param {boolean} [indentedSyntax] If `true`, use the indented syntax. Otherwise, use CSS-superset syntax.
+ * @returns {boolean} `true` if the file is valid SCSS/SASS; `false` otherwise.
+ */
 function validate(text, indentedSyntax)
 {
     try

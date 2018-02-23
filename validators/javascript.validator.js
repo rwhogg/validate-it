@@ -1,6 +1,16 @@
+/**
+ * @module JSValidator
+ */
+
 // Note: this doesn't support JSX, E4X, or any similar kinds of extensions.
 // JSX might be worth supporting in the future, but anything else probably not
 
+/**
+ * Validates JavaScript files according to the latest standard
+ * (ES 9 proposal as of this writing)
+ * @param {string} text Text of the file to validate.
+ * @returns {boolean} `true` if file is valid, `false` otherwise.
+ */
 function validate(text)
 {
     const acorn = require("acorn");
