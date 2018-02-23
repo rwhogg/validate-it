@@ -32,9 +32,8 @@
         "vnu-jar": "^17.11.1"
     },
     "devDependencies": {
-        "eslint": "^4.18.0",
-        "eslint-config-rwhogg": "0.1.0",
-        "eslint-plugin-fp": "^2.3.0",
+        "eslint": "^4.18.1",
+        "eslint-config-rwhogg": "0.2.0",
         "glob": "^7.1.2",
         "jsdox": "^0.4.10",
         "np": "^2.20.1"

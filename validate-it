@@ -1,82 +1,70 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const meow = require("meow");
-const mime = require("mime-types");
+const fs = require("fs")
+const meow = require("meow")
+const mime = require("mime-types")
 
 const cli = meow(`
     Usage
         $ validate-it <path> <path>...
-`);
-const validators = {};
+`)
+const validators = {}
 
 /**
  * Entry point for validate-it
  * @returns {number} Exit status for validate-it.
  */
-async function main()
-{
-    const results = await Promise.all(cli.input.map(async function(path)
-    {
-        const fullType = mime.lookup(path);
-        if(!fullType)
-        {
-            console.error(`File ${path} is of invalid or unknown type!`);
-            return 2;
+async function main() {
+    const results = await Promise.all(cli.input.map(async function(path) {
+        const fullType = mime.lookup(path)
+        if(!fullType) {
+            console.error(`File ${path} is of invalid or unknown type!`)
+            return 2
         }
 
-        let valid;
-        try
-        {
-            valid = await validate(path, fullType);
+        let valid
+        try {
+            valid = await validate(path, fullType)
         }
-        catch(e)
-        {
-            console.error(e.message);
-            return 2;
+        catch(e) {
+            console.error(e.message)
+            return 2
         }
 
-        if(valid)
-        {
-            console.log(`File ${path} is valid!`);
-            return 0;
+        if(valid) {
+            console.log(`File ${path} is valid!`)
+            return 0
         }
-        console.error(`File ${path} is not valid!`);
-        return 1;
-    }));
+        console.error(`File ${path} is not valid!`)
+        return 1
+    }))
 
-    let result = 0;
-    if(results.includes(2))
-    {
-        result = 2;
+    let result = 0
+    if(results.includes(2)) {
+        result = 2
     }
-    else if(results.includes(1))
-    {
-        result = 1;
+    else if(results.includes(1)) {
+        result = 1
     }
-    process.exit(result);
+    process.exit(result)
 }
 
-async function validate(path, fullType)
-{
-    const subtype = fullType.split("/")[1];
-    const type = subtype.startsWith("x-") ? subtype.split("x-")[1] : subtype;
+async function validate(path, fullType) {
+    const subtype = fullType.split("/")[1]
+    const type = subtype.startsWith("x-") ? subtype.split("x-")[1] : subtype
 
-    try
-    {
-        validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`);
+    try {
+        validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`)
     }
-    catch(e)
-    {
+    catch(e) {
         throw new Error(`No validator exists for MIME type ${fullType}. If this is a commonly-used file type, please` +
-                        " consider submitting a PR to https://github.com/rwhogg/validate-it to add support for it.");
+                        " consider submitting a PR to https://github.com/rwhogg/validate-it to add support for it.")
     }
-    const validator = validators[type];
-    if(typeof validator !== "function")
-    {
-        throw new Error(`Bad validator for MIME type ${fullType}`);
+    const validator = validators[type]
+    if(typeof validator !== "function") {
+        throw new Error(`Bad validator for MIME type ${fullType}`)
     }
-    const text = fs.readFileSync(path, {encoding: "utf-8"});
-    return await validator(text);
+    const text = fs.readFileSync(path, {encoding: "utf-8"})
+    return await validator(text)
 }
 
-main();
+main()

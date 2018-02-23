@@ -11,27 +11,23 @@
  * @param {string} text Text of the file to validate.
  * @returns {boolean} `true` if file is valid, `false` otherwise.
  */
-function validate(text)
-{
-    const acorn = require("acorn");
+function validate(text) {
+    const acorn = require("acorn")
     const options = {
         ecmaVersion: 9,
-        allowHashBang: true
-    };
+        allowHashBang: true,
+    }
     // JS code can be parsed either as a script or a module. Try both
-    return ["script", "module"].map(sourceType =>
-    {
-        try
-        {
-            options.sourceType = sourceType;
-            acorn.parse(text, options);
-            return true;
+    return ["script", "module"].map(sourceType => {
+        try {
+            options.sourceType = sourceType
+            acorn.parse(text, options)
+            return true
         }
-        catch(e)
-        {
-            return false;
+        catch(e) {
+            return false
         }
-    }).includes(true);
+    }).includes(true)
 }
 
-module.exports = validate;
+module.exports = validate

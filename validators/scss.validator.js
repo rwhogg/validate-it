@@ -2,7 +2,7 @@
  * @module SCSSValidator
  */
 
-const sass = require("node-sass"); // dart-sass is still in beta
+const sass = require("node-sass") // dart-sass is still in beta
 
 /**
  * Validates SCSS (or SASS) files.
@@ -10,22 +10,19 @@ const sass = require("node-sass"); // dart-sass is still in beta
  * @param {boolean} [indentedSyntax] If `true`, use the indented syntax. Otherwise, use CSS-superset syntax.
  * @returns {boolean} `true` if the file is valid SCSS/SASS; `false` otherwise.
  */
-function validate(text, indentedSyntax)
-{
-    try
-    {
+function validate(text, indentedSyntax) {
+    try {
         sass.renderSync({
             data: text,
-            indentedSyntax
-        });
-        return true;
+            indentedSyntax,
+        })
+        return true
     }
-    catch(e)
-    {
-        console.error(e);
-        return false;
+    catch(e) {
+        console.error(e)
+        return false
     }
 
 }
 
-module.exports = validate;
+module.exports = validate
