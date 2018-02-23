@@ -23,6 +23,7 @@ We have all* your validation tasks right here!
 * JSON
 * LESS
 * Sass and SCSS
+* XML
 
 ## Copyright
 
