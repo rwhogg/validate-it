@@ -2,12 +2,12 @@
 const fs = require("fs")
 const meow = require("meow")
 const mime = require("mime-types")
+const validate = require(__dirname)
 
 const cli = meow(`
     Usage
         $ validate-it <path> <path>...
 `)
-const validators = {}
 
 /**
  * Entry point for validate-it
@@ -23,7 +23,8 @@ async function main() {
 
         let valid
         try {
-            valid = await validate(path, fullType)
+            const text = fs.readFileSync(path, {encoding: "utf-8"})
+            valid = await validate(text, fullType)
         }
         catch(e) {
             console.error(e.message)
@@ -46,25 +47,6 @@ async function main() {
         result = 1
     }
     process.exit(result)
-}
-
-async function validate(path, fullType) {
-    const subtype = fullType.split("/")[1]
-    const type = subtype.startsWith("x-") ? subtype.split("x-")[1] : subtype
-
-    try {
-        validators[type] = validators[type] || require(`${__dirname}/validators/${type}.validator.js`)
-    }
-    catch(e) {
-        throw new Error(`No validator exists for MIME type ${fullType}. If this is a commonly-used file type, please` +
-                        " consider submitting a PR to https://github.com/rwhogg/validate-it to add support for it.")
-    }
-    const validator = validators[type]
-    if(typeof validator !== "function") {
-        throw new Error(`Bad validator for MIME type ${fullType}`)
-    }
-    const text = fs.readFileSync(path, {encoding: "utf-8"})
-    return await validator(text)
 }
 
 main()

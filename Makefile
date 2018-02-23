@@ -1,5 +1,5 @@
 lint:
-	npx eslint validate-it.js test.js validators/*.js
+	npx eslint validate-it.js index.js test.js validators/*.js
 
 test: lint
 	node test.js
@@ -7,9 +7,9 @@ test: lint
 man/validate-it.1: man/validate-it.1.ronn
 	ronn -m man/validate-it.1.ronn > man/validate-it.1
 
-docs: validate-it.js validators man/validate-it.1
+docs: validate-it.js index.js validators man/validate-it.1
 	rm -rf docs
-	npx jsdox validate-it.js validators/*.js --output docs folder
+	npx jsdox validate-it.js index.js validators/*.js --output docs folder
 
 release:
 	npx np
