@@ -30,7 +30,7 @@
         "meow": "^4.0.0",
         "mime-types": "^2.1.21",
         "node-sass": "^4.9.3",
-        "vnu-jar": "^17.11.1"
+        "vnu-jar": "^18.11.5"
     },
     "devDependencies": {
         "eslint": "^5.12.0",
