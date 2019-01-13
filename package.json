@@ -28,7 +28,7 @@
         "less": "^3.8.1",
         "libxmljs": "^0.19.5",
         "meow": "^4.0.0",
-        "mime-types": "^2.1.18",
+        "mime-types": "^2.1.21",
         "node-sass": "^4.9.3",
         "vnu-jar": "^17.11.1"
     },
