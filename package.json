@@ -29,7 +29,7 @@
         "libxmljs": "^0.19.5",
         "meow": "^4.0.1",
         "mime-types": "^2.1.21",
-        "node-sass": "^4.9.3",
+        "node-sass": "^4.11.0",
         "vnu-jar": "^18.11.5"
     },
     "devDependencies": {
