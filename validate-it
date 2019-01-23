@@ -3,11 +3,14 @@ const fs = require("fs")
 const meow = require("meow")
 const mime = require("mime-types")
 const validate = require(__dirname)
+const NotReadyError = require(__dirname + "/NotReadyError.js")
 
 const cli = meow(`
     Usage
         $ validate-it <path> <path>...
 `)
+
+const VALIDATOR_NOT_READY = 3
 
 /**
  * Entry point for validate-it
@@ -28,6 +31,10 @@ async function main() {
         }
         catch(e) {
             console.error(e.message)
+
+            if(e instanceof NotReadyError) {
+                return VALIDATOR_NOT_READY
+            }
             return 2
         }
 
@@ -42,6 +49,9 @@ async function main() {
     let result = 0
     if(results.includes(2)) {
         result = 2
+    }
+    else if(results.includes(VALIDATOR_NOT_READY)) {
+        result = VALIDATOR_NOT_READY
     }
     else if(results.includes(1)) {
         result = 1

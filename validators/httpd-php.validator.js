@@ -20,4 +20,13 @@ async function validate(text) {
     }
 }
 
+/**
+ * Confirms that we have PHP available and in the PATH.
+ * @returns {undefined}
+ */
+validate.ready = function() {
+    const which = require("which").sync
+    which("php")
+}
+
 module.exports = validate

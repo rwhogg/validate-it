@@ -3,6 +3,7 @@
  */
 
 const validators = {}
+const NotReadyError = require("./NotReadyError.js")
 
 /**
  * Validates the file at the given path with the given MIME type.
@@ -24,6 +25,14 @@ async function validate(text, fullType) {
     const validator = validators[type]
     if(typeof validator !== "function") {
         throw new Error(`Bad validator for MIME type ${fullType}`)
+    }
+
+    // check if this validator is ready to run on this machine (you might eg. be missing a dependency)
+    try {
+        (typeof validator.ready === "function") && validator.ready()
+    }
+    catch(e) {
+        throw new NotReadyError(`Validator for MIME type ${fullType} cannot run on this machine. Reason: ${e.message}`)
     }
 
     return await validator(text)

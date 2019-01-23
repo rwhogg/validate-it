@@ -20,4 +20,14 @@ function validate(text) {
     }
 }
 
+/**
+ * Confirms that we have Java available and in the PATH.
+ * (Required to use VNU).
+ * @returns {undefined}
+ */
+validate.ready = function() {
+    const which = require("which").sync
+    which("java")
+}
+
 module.exports = validate
