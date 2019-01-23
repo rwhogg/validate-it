@@ -15,7 +15,7 @@
         "validate",
         "validation"
     ],
-    "author": "Bob W. Hogg <rwhogg@linux.com>",
+    "author": "Bob W. Hogg <wombat@rwhogg.site>",
     "license": "GPL-3.0+",
     "bugs": {
         "url": "https://github.com/rwhogg/validate-it/issues"
