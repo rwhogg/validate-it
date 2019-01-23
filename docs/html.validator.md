@@ -17,6 +17,14 @@ Validates HTML files according to HTML5 rules.
 **Returns**: `boolean`, `true` if valid; `false` otherwise.
 
 
+### HTMLValidator.ready() 
+
+Confirms that we have Java available and in the PATH.
+(Required to use VNU).
+
+**Returns**: `undefined`
+
+
 
 * * *
 

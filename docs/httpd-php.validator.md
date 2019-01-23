@@ -18,6 +18,13 @@ value of `php --version` on your machine.
 **Returns**: `boolean`, `true` if the file is valid PHP; `false` otherwise.
 
 
+### PHPValidator.ready() 
+
+Confirms that we have PHP available and in the PATH.
+
+**Returns**: `undefined`
+
+
 
 * * *
 
