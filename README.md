@@ -20,6 +20,7 @@ We have all* your validation tasks right here!
 * HTML
 * CSS
 * JavaScript
+* PHP
 * JSON
 * LESS
 * Sass and SCSS

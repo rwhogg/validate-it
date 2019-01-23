@@ -1,0 +1,3 @@
+<?php
+
+$missing = "semicolon"
