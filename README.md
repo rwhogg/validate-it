@@ -24,6 +24,7 @@ We have all* your validation tasks right here!
 * LESS
 * Sass and SCSS
 * XML
+* Handlebars
 
 ## Copyright
 
