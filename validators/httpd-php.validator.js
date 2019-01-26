@@ -12,7 +12,7 @@ const execa = require("execa").sync
  */
 async function validate(text) {
     try {
-        execa("php", [], {input: text})
+        execa("php", ["-l"], {input: text)
         return true
     }
     catch(e) {
