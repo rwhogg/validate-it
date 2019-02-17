@@ -19,12 +19,14 @@ function validate(text) {
     }
     // JS code can be parsed either as a script or a module. Try both
     return ["script", "module"].map(sourceType => {
-        try {
+        try
+        {
             options.sourceType = sourceType
             acorn.parse(text, options)
             return true
         }
-        catch(e) {
+        catch(e)
+        {
             return false
         }
     }).includes(true)

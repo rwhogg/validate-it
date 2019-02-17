@@ -10,11 +10,13 @@ const less = require("less")
  * @returns {boolean} `true` if the file is valid LESS; `false` otherwise.
  */
 async function validate(text) {
-    try {
+    try
+    {
         await less.parse(text)
         return true
     }
-    catch(e) {
+    catch(e)
+    {
         return false
     }
 }

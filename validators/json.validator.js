@@ -8,11 +8,13 @@
  * @returns {boolean} `true` if the file is valid JSON; `false` otherwise.
  */
 function validate(text) {
-    try {
+    try
+    {
         JSON.parse(text)
         return true
     }
-    catch(e) {
+    catch(e)
+    {
         return false
     }
 }

@@ -10,11 +10,13 @@ const libxmljs = require("libxmljs")
  * @returns {boolean} `true` if valid; `false` otherwise.
  */
 function validate(text) {
-    try {
+    try
+    {
         const result = libxmljs.parseXmlString(text)
         return !(result.errors && Array.isArray(result.errors) && result.errors.length > 0)
     }
-    catch(e) {
+    catch(e)
+    {
         return false
     }
 }
