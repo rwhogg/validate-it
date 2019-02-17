@@ -11,14 +11,16 @@ const sass = require("node-sass") // dart-sass is still in beta
  * @returns {boolean} `true` if the file is valid SCSS/SASS; `false` otherwise.
  */
 function validate(text, indentedSyntax) {
-    try {
+    try
+    {
         sass.renderSync({
             data: text,
             indentedSyntax,
         })
         return true
     }
-    catch(e) {
+    catch(e)
+    {
         console.error(e)
         return false
     }
