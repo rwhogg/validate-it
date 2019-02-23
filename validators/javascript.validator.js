@@ -6,8 +6,8 @@
 // JSX might be worth supporting in the future, but anything else probably not
 
 /**
- * Validates JavaScript files according to the latest standard
- * (ES 9 proposal as of this writing)
+ * Validates JavaScript files according to the ES 9 proposal
+ * (the latest version as of this writing)
  * @param {string} text Text of the file to validate.
  * @returns {boolean} `true` if file is valid, `false` otherwise.
  */
