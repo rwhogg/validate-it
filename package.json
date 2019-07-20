@@ -45,5 +45,14 @@
     },
     "directories": {
         "man": "man"
-    }
+    },
+    "files": [
+        "index.js",
+        "LICENSE.md",
+        "README.md",
+        "validate-it",
+        "docs",
+        "man",
+        "validators"
+    ]
 }
