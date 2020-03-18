@@ -1,6 +1,6 @@
 {
     "name": "@rwhogg/validate-it",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "description": "Validate any file type (well, a lot of them, anyways)",
     "main": "index.js",
     "bin": "./validate-it",
@@ -22,26 +22,26 @@
     },
     "homepage": "https://github.com/rwhogg/validate-it#readme",
     "dependencies": {
-        "acorn": "^6.1.1",
+        "acorn": "^6.4.1",
         "camelcase": "^5.3.1",
         "css": "^2.2.4",
         "execa": "^1.0.0",
-        "handlebars": "^4.1.2",
-        "less": "^3.9.0",
+        "handlebars": "^4.7.3",
+        "less": "^3.11.1",
         "libxmljs": "^0.19.5",
-        "meow": "^5.0.0",
+        "meow": "^6.0.1",
         "mime-types": "^2.1.24",
-        "node-sass": "^4.12.0",
-        "vnu-jar": "^19.6.7"
+        "node-sass": "^4.13.1",
+        "vnu-jar": "^20.3.16"
     },
     "devDependencies": {
-        "eslint": "^5.16.0",
-        "eslint-config-rwhogg": "0.4.2",
+        "eslint": "^6.8.0",
+        "eslint-config-rwhogg": "0.4.4",
         "glob": "^7.1.4",
         "jsdox": "^0.4.10"
     },
     "engines": {
-        "node": ">= 8"
+        "node": ">= 10"
     },
     "directories": {
         "man": "man"

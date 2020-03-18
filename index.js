@@ -33,7 +33,7 @@ async function validate(text, fullType) {
         throw new Error(`Bad validator for MIME type ${fullType}`)
     }
 
-    return await validator(text)
+    return validator(text)
 }
 
 module.exports = validate
