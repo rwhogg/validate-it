@@ -22,7 +22,7 @@
     },
     "homepage": "https://github.com/rwhogg/validate-it#readme",
     "dependencies": {
-        "acorn": "^6.1.1",
+        "acorn": "^6.4.1",
         "camelcase": "^5.3.1",
         "css": "^2.2.4",
         "execa": "^1.0.0",
