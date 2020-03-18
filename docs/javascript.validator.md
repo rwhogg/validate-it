@@ -8,8 +8,8 @@
 
 ### JSValidator.validate(text) 
 
-Validates JavaScript files according to the latest standard
-(ES 9 proposal as of this writing)
+Validates JavaScript files according to the ES 9 proposal
+(the latest version as of this writing)
 
 **Parameters**
 
