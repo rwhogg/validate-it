@@ -6,9 +6,9 @@ File bugs at https://github.com/rwhogg/validate-it/issues
 
 ## Developing
 
-You'll need Node 8.x or higher (because we use async/await), npm, npx, ronn, and GNU Make.
+You'll need Node 10.x or higher, npm, npx, ronn, and GNU Make.
 
-Then run `npm install` to get all the other dependencies.
+Then run `pnpm install` to get all the other dependencies.
 
 Before submitting a PR, please run `make test`.
 

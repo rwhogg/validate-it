@@ -41,7 +41,7 @@
         "jsdox": "^0.4.10"
     },
     "engines": {
-        "node": ">= 8"
+        "node": ">= 10"
     },
     "directories": {
         "man": "man"
