@@ -36,7 +36,7 @@
     },
     "devDependencies": {
         "eslint": "^5.16.0",
-        "eslint-config-rwhogg": "0.4.2",
+        "eslint-config-rwhogg": "0.4.4",
         "glob": "^7.1.4",
         "jsdox": "^0.4.10"
     },
