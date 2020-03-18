@@ -9,7 +9,7 @@ dependencies:
   meow: 5.0.0
   mime-types: 2.1.26
   node-sass: 4.13.1
-  vnu-jar: 19.9.4
+  vnu-jar: 20.3.16
 devDependencies:
   eslint: 6.8.0
   eslint-config-rwhogg: 0.4.4
@@ -2637,12 +2637,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
-  /vnu-jar/19.9.4:
+  /vnu-jar/20.3.16:
     dev: false
     engines:
       node: '>=0.10'
     resolution:
-      integrity: sha512-x91WyaNr1oPJaYZkbyMElRyV60BUaxPuhm3zXXjlFOpW3E2KavPWlyohX0LTf6gX7/tujIMgLE5UGc0jn7o4XQ==
+      integrity: sha512-CHlvP4lilQvgjSRDsiB7i0lN0gnkq6zv3sN/71FYVgOQ/nYLXFfUhGIVeGskm9W1C0+UralU1XQnbsjJr2ijaw==
   /which-module/1.0.0:
     dev: false
     resolution:
@@ -2751,4 +2751,4 @@ specifiers:
   meow: ^5.0.0
   mime-types: ^2.1.24
   node-sass: ^4.13.1
-  vnu-jar: ^19.6.7
+  vnu-jar: ^20.3.16
