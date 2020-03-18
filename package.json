@@ -29,7 +29,7 @@
         "handlebars": "^4.7.3",
         "less": "^3.11.1",
         "libxmljs": "^0.19.5",
-        "meow": "^5.0.0",
+        "meow": "^6.0.1",
         "mime-types": "^2.1.24",
         "node-sass": "^4.13.1",
         "vnu-jar": "^20.3.16"
