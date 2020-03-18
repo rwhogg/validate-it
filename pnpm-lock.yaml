@@ -8,7 +8,7 @@ dependencies:
   libxmljs: 0.19.7
   meow: 5.0.0
   mime-types: 2.1.26
-  node-sass: 4.13.0
+  node-sass: 4.13.1
   vnu-jar: 19.9.4
 devDependencies:
   eslint: 6.8.0
@@ -1623,7 +1623,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
-  /node-sass/4.13.0:
+  /node-sass/4.13.1:
     dependencies:
       async-foreach: 0.1.3
       chalk: 1.1.3
@@ -1648,7 +1648,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-W1XBrvoJ1dy7VsvTAS5q1V45lREbTlZQqFbiHb3R3OTTCma0XBtuG6xZ6Z4506nR4lmHPTqVRwxT6KgtWC97CA==
+      integrity: sha512-TTWFx+ZhyDx1Biiez2nB0L3YrCZ/8oHagaDalbuBSlqXgUPsdkUSzJsVxeDO9LtPB49+Fh3WQl3slABo6AotNw==
   /nopt/3.0.6:
     dependencies:
       abbrev: 1.1.1
@@ -2750,5 +2750,5 @@ specifiers:
   libxmljs: ^0.19.5
   meow: ^5.0.0
   mime-types: ^2.1.24
-  node-sass: ^4.12.0
+  node-sass: ^4.13.1
   vnu-jar: ^19.6.7
