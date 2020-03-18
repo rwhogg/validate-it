@@ -4,7 +4,7 @@ dependencies:
   css: 2.2.4
   execa: 1.0.0
   handlebars: 4.7.3
-  less: 3.10.3
+  less: 3.11.1
   libxmljs: 0.19.7
   meow: 5.0.0
   mime-types: 2.1.26
@@ -1422,9 +1422,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-MIrMr6C8SDo4Z7S28rlQYlHRuDU=
-  /less/3.10.3:
+  /less/3.11.1:
     dependencies:
       clone: 2.1.2
+      tslib: 1.10.0
     dev: false
     engines:
       node: '>=6'
@@ -1439,7 +1440,7 @@ packages:
       request: 2.88.0
       source-map: 0.6.1
     resolution:
-      integrity: sha512-vz32vqfgmoxF1h3K4J+yKCtajH0PWmjkIFgbs5d78E/c/e+UQTnI+lWK+1eQRE95PXM2mC3rJlLSSP9VQHnaow==
+      integrity: sha512-tlWX341RECuTOvoDIvtFqXsKj072hm3+9ymRBe76/mD6O5ZZecnlAOVDlWAleF2+aohFrxNidXhv2773f6kY7g==
   /levn/0.3.0:
     dependencies:
       prelude-ls: 1.1.2
@@ -2253,6 +2254,7 @@ packages:
       tough-cookie: 2.4.3
       tunnel-agent: 0.6.0
       uuid: 3.3.3
+    deprecated: 'request has been deprecated, see https://github.com/request/request/issues/3142'
     dev: false
     engines:
       node: '>= 4'
@@ -2724,7 +2726,6 @@ packages:
     resolution:
       integrity: sha512-m6s2OdQe5wgpFMC+pAJ+q9djG82O2jcHPOI6RNg1yy9rCYR+WD6Nbpl32fDpfC56nirdRy+opFa/Vk7HYhqaew==
   /tslib/1.10.0:
-    dev: true
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
   /tunnel-agent/0.6.0:
@@ -2924,7 +2925,7 @@ specifiers:
   glob: ^7.1.4
   handlebars: ^4.7.3
   jsdox: ^0.4.10
-  less: ^3.9.0
+  less: ^3.11.1
   libxmljs: ^0.19.5
   meow: ^5.0.0
   mime-types: ^2.1.24
