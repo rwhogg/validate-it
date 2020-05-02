@@ -26,18 +26,18 @@
         "camelcase": "^5.3.1",
         "css": "^2.2.4",
         "execa": "^1.0.0",
-        "handlebars": "^4.7.3",
+        "handlebars": "^4.7.6",
         "less": "^3.11.1",
-        "libxmljs": "^0.19.5",
-        "meow": "^6.0.1",
-        "mime-types": "^2.1.24",
-        "node-sass": "^4.13.1",
+        "libxmljs": "^0.19.7",
+        "meow": "^6.1.1",
+        "mime-types": "^2.1.27",
+        "node-sass": "^4.14.0",
         "vnu-jar": "^20.3.16"
     },
     "devDependencies": {
         "eslint": "^6.8.0",
         "eslint-config-rwhogg": "0.4.4",
-        "glob": "^7.1.4",
+        "glob": "^7.1.6",
         "jsdox": "^0.4.10"
     },
     "engines": {
